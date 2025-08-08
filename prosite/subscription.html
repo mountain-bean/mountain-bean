@@ -6,6 +6,59 @@
   <title>Mountain Bean Café | Subscription</title>
   <meta name="description" content="Choose the right coffee plan for you and subscribe today." />
   <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    img.plan-img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ccc;
+      }
+      td {
+        text-align: left;
+        border: none;
+      }
+      img.plan-img {
+        width: 80px;
+      }
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #d2691e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .btn-primary:hover {
+      background-color: #a0522d;
+    }
+  </style>
 </head>
 <body>
   <nav class="nav-global">
@@ -16,7 +69,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main role="main" style="padding: 20px; max-width: 900px; margin: auto;">
+  <main role="main">
     <h1>Subscription Plans</h1>
     <p>Choose the perfect plan to enjoy fresh Mountain Bean coffee delivered to your door.</p>
 
@@ -30,29 +83,41 @@
       </thead>
       <tbody>
         <tr>
-          <td>Basic Brew</td>
+          <td>
+            <img src="../images/plan-basic.jpg" alt="Basic Brew coffee bag" class="plan-img"><br>
+            Basic Brew
+          </td>
           <td>$10/month</td>
           <td>1 bag, monthly delivery</td>
         </tr>
         <tr>
-          <td>Mountain Roast</td>
+          <td>
+            <img src="../images/plan-mountain.jpg" alt="Mountain Roast coffee set" class="plan-img"><br>
+            Mountain Roast
+          </td>
           <td>$25/month</td>
           <td>3 bags, monthly delivery</td>
         </tr>
         <tr>
-          <td>Trail Blazer</td>
+          <td>
+            <img src="../images/plan-trail.jpg" alt="Trail Blazer coffee bundle" class="plan-img"><br>
+            Trail Blazer
+          </td>
           <td>$40/month</td>
           <td>5 bags, priority shipping</td>
         </tr>
         <tr>
-          <td>Ultimate Explorer</td>
+          <td>
+            <img src="../images/plan-ultimate.jpg" alt="Ultimate Explorer coffee set with merch" class="plan-img"><br>
+            Ultimate Explorer
+          </td>
           <td>$60/month</td>
           <td>10 bags, free merch</td>
         </tr>
       </tbody>
     </table>
 
-    <a href="subscription.html" class="btn-primary" role="button" style="margin-top:20px;">Subscribe Now</a>
+    <a href="subscription.html" class="btn-primary" role="button">Subscribe Now</a>
   </main>
 
   <footer>
