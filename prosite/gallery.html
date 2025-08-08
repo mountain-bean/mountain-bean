@@ -1,77 +1,96 @@
-<main role="main" style="padding: 20px; max-width: 900px; margin: auto;">
-  <h1>Photo Gallery</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mountain Bean Café | Gallery</title>
+  <meta name="description" content="Explore photos of Mountain Bean Café and our coffee." />
+  <link rel="stylesheet" href="../css/main.css" />
 
   <style>
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .logo {
+      max-width: 150px;
+      display: block;
+      margin: 20px auto;
+    }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
-      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
     }
-
-    .gallery-grid a {
-      display: block;
-      width: 100%;
-      max-width: 140px;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-grid a:hover,
-    .gallery-grid a:focus {
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.5);
-      outline: none;
-    }
-
     .gallery-grid img {
       width: 100%;
       height: auto;
+      border-radius: 5px;
       display: block;
-      object-fit: cover;
-      border-radius: 8px;
+      transition: transform 0.2s;
     }
-
-    @media (max-width: 480px) {
-      .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 10px;
-      }
-      .gallery-grid a {
-        max-width: 100px;
-      }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    nav.nav-global {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    nav.nav-global a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav.nav-global a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: rgba(0,0,0,0.7);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
     }
   </style>
+</head>
+<body>
+  <nav class="nav-global">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="subscription.html">Subscription</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <div class="gallery-grid">
-    <a href="../images/gallery1.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery1.jpg" alt="Coffee beans closeup" width="140" height="93" />
-    </a>
-    <a href="../images/gallery2.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery2.jpg" alt="Barista preparing coffee" width="140" height="93" />
-    </a>
-    <a href="../images/gallery3.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery3.jpg" alt="Cafe interior seating area" width="140" height="93" />
-    </a>
-    <a href="../images/gallery4.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery4.jpg" alt="Roasting coffee beans" width="140" height="93" />
-    </a>
-    <a href="../images/gallery5.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery5.jpg" alt="Coffee cup with latte art" width="140" height="93" />
-    </a>
-    <a href="../images/gallery6.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery6.jpg" alt="Mountain scenery with coffee" width="140" height="93" />
-    </a>
-    <a href="../images/gallery7.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery7.jpg" alt="Coffee beans in burlap sack" width="140" height="93" />
-    </a>
-    <a href="../images/gallery8.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery8.jpg" alt="Customers enjoying coffee" width="140" height="93" />
-    </a>
-    <a href="../images/gallery10.jpg" target="_blank" rel="noopener">
-      <img src="../images/gallery10.jpg" alt="Coffee cup on wooden table" width="140" height="93" />
-    </a>
-  </div>
-</main>
+  <main role="main">
+    <img src="../images/logo.png" alt="Mountain Bean Café Logo" class="logo" />
+
+    <h1>Photo Gallery</h1>
+    <div class="gallery-grid">
+      <a href="../images/gallery1.jpg"><img src="../images/gallery1.jpg" alt="Coffee beans closeup" /></a>
+      <a href="../images/gallery2.jpg"><img src="../images/gallery2.jpg" alt="Barista preparing coffee" /></a>
+      <a href="../images/gallery3.jpg"><img src="../images/gallery3.jpg" alt="Cafe interior seating area" /></a>
+      <a href="../images/gallery4.jpg"><img src="../images/gallery4.jpg" alt="Roasting coffee beans" /></a>
+      <a href="../images/gallery5.jpg"><img src="../images/gallery5.jpg" alt="Coffee cup with latte art" /></a>
+      <a href="../images/gallery6.jpg"><img src="../images/gallery6.jpg" alt="Mountain scenery with coffee" /></a>
+      <a href="../images/gallery7.jpg"><img src="../images/gallery7.jpg" alt="Coffee beans in burlap sack" /></a>
+      <a href="../images/gallery8.jpg"><img src="../images/gallery8.jpg" alt="Customers enjoying coffee" /></a>
+      <a href="../images/gallery10.jpg"><img src="../images/gallery10.jpg" alt="Fresh coffee brewing in glass pour-over" /></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mountain Bean Café</p>
+  </footer>
+</body>
+</html>
